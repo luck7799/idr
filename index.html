@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://use.fontawesome.com/76c6dedabc.js"></script>
+</head>
+<body>
+<style type="text/css">
+  html{
+    //background-image: url("images/simple_dashed.png");
+    background-color: black;
+  }
+  body{
+    //background-image: url("images/corner-curtains1.png"), url("images/corner-curtains2.png"), url("images/corner-curtains4.png"), url("images/corner-curtains5.png");
+    //background-repeat: no-repeat, no-repeat, repeat-y, repeat-y;
+    //background-position: top left, top right, top left, top right;
+    //background-size: 20% auto, 20% auto, 4.2% auto, 4.2% auto;
+    //background-image: url("images/leftBg.jpg"), url("images/rightBg.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, top right;
+    z-index: 1;
+    position: relative;
+    background-attachment: fixed;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    content:"";
+    display:table;
+  }
+  .clearfix:after {
+    clear:both;
+  }
+  .clearfix {
+    zoom:1;
+  }
+  .dpinblock{
+    display: inline-block;
+  }
+  .dpblock{
+    display: block;
+  }
+  p.ln0{
+    line-height: 0;
+  }
+  p.mar0{
+    margin: 0;
+  }
+  .row.mar0{
+    margin: 0;
+  }
+  .mar75bot{
+    margin-bottom: .75rem;
+  }
+  .cntnt1{
+background: rgba(92,92,92,1);
+background: -moz-linear-gradient(top, rgba(92,92,92,1) 0%, rgba(31,31,31,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(92,92,92,1)), color-stop(100%, rgba(31,31,31,1)));
+background: -webkit-linear-gradient(top, rgba(92,92,92,1) 0%, rgba(31,31,31,1) 100%);
+background: -o-linear-gradient(top, rgba(92,92,92,1) 0%, rgba(31,31,31,1) 100%);
+background: -ms-linear-gradient(top, rgba(92,92,92,1) 0%, rgba(31,31,31,1) 100%);
+background: linear-gradient(to bottom, rgba(92,92,92,1) 0%, rgba(31,31,31,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c5c5c', endColorstr='#1f1f1f', GradientType=0 );
+  }
+  .dpinblock{
+    display: inline-block;
+  }
+  .table-of-contents a:hover,
+  .table-of-contents a.active
+   {
+      color: #fff;
+      padding-left: 19px;
+      border-left: 1px solid transparent;
+      border-bottom: 3px solid rgb(101, 147, 255);
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,73,199,1) 50%, rgba(0,96,214,1) 51%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(0,73,199,1)), color-stop(51%, rgba(0,96,214,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,73,199,1) 50%, rgba(0,96,214,1) 51%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,73,199,1) 50%, rgba(0,96,214,1) 51%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,73,199,1) 50%, rgba(0,96,214,1) 51%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(0,73,199,1) 50%, rgba(0,96,214,1) 51%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+ font-weight: normal;
+  }
+
+  .table-of-contents li{
+    padding: 0;
+  }
+
+  .table-of-contents a {
+      display: inline-block;
+      font-weight: 300;
+      color: #0F2696;
+      padding-left: 20px;
+      height: auto;
+      line-height: inherit;
+      letter-spacing: .4;
+      box-sizing: border-box;
+      font-weight: normal;
+  }
+  .bora5{
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(101, 147, 255,0.5);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(101, 147, 255,0.5);
+    box-shadow: 0px 0px 9px 2px rgba(101, 147, 255,0.5); 
+  }
+  .row{
+    margin-bottom: 1rem;
+  }
+.row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+}
+.petals{
+  background-image: url("images/petals.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+.symphony{
+  background-image: url("images/symphony.png");
+  background-size: 150px;
+}
+.blgrad{
+background: rgba(93,144,198,1);
+background: -moz-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(93,144,198,1)), color-stop(100%, rgba(25,93,171,1)));
+background: -webkit-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+background: -o-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+background: -ms-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+background: linear-gradient(to bottom, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d90c6', endColorstr='#195dab', GradientType=0 );
+}
+
+.oragePetals{
+  background-image: url("images/flwer01.png"), url("images/flwer02.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+}
+#contactArea p{
+  //background-color: rgba(98, 133, 215, .5);
+  margin: 0;
+  padding: .5rem .75rem;
+  transition: all ease-in-out .2s;
+  background-image: url("images/simple_dashed.png");
+
+}
+.dashedBg{
+  background-image: url("images/simple_dashed.png");
+}
+#contactArea p:hover{
+  background-color: #D58100;
+}
+#contactArea p > *{
+  vertical-align: middle;
+  display: inline-block;
+}
+#contactArea p .dText{
+  color: #fff;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  transition: all ease-in-out .2s;
+}
+#contactArea p:hover .dText{
+  color: #fff;
+}
+.olOrange{
+  text-shadow: 2px 0px 0px rgb(0, 30, 99);
+}
+.slider{
+  height: 328px !important;
+}
+.banktext b{
+  display: inline-block;
+  padding: 0 2rem;
+}
+.neon{
+  background: rgba(255,255,255,0);
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,0,255,1) 47%, rgba(255,0,255,1) 55%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(47%, rgba(255,0,255,1)), color-stop(55%, rgba(255,0,255,1)), color-stop(100%, rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,0,255,1) 47%, rgba(255,0,255,1) 55%, rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,0,255,1) 47%, rgba(255,0,255,1) 55%, rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,0,255,1) 47%, rgba(255,0,255,1) 55%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,0,255,1) 47%, rgba(255,0,255,1) 55%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+.neon2{
+background: rgba(255,255,255,0);
+background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,103,228,0.98) 46%, rgba(0,103,228,1) 47%, rgba(0,103,228,1) 55%, rgba(255,255,255,0) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(46%, rgba(0,103,228,0.98)), color-stop(47%, rgba(0,103,228,1)), color-stop(55%, rgba(0,103,228,1)), color-stop(100%, rgba(255,255,255,0)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,103,228,0.98) 46%, rgba(0,103,228,1) 47%, rgba(0,103,228,1) 55%, rgba(255,255,255,0) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,103,228,0.98) 46%, rgba(0,103,228,1) 47%, rgba(0,103,228,1) 55%, rgba(255,255,255,0) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,103,228,0.98) 46%, rgba(0,103,228,1) 47%, rgba(0,103,228,1) 55%, rgba(255,255,255,0) 100%);
+background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,103,228,0.98) 46%, rgba(0,103,228,1) 47%, rgba(0,103,228,1) 55%, rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+
+}
+.neontext2{
+    text-shadow: 0px 0px 3px rgb(0, 93, 206);
+    color: #fff;
+}
+.neontext{
+    text-shadow: 0px 0px 3px #FF00FF;
+    color: #FF00FF;
+}
+#jackArea{
+  padding: 1rem 0;
+  background-image: url("images/jackBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: #062B52;
+    border-radius: 5px;
+    height: 2.8rem;
+    color: #fff;
+    box-shadow: inset 0px 2px 2px 1px rgba(0, 0, 0, 0.75);
+    border-bottom: 1px solid #9e9e9e;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=text].active, input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  box-shadow: inset 0px 2px 2px 1px rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid #D6D6D6;
+  background-color: #4F85C0;
+}
+
+.d3cntn{
+  background-color: #062B52;
+  border-radius: 7px;
+  color: #fff;
+  box-shadow: inset 0px 2px 2px 1px rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid #9e9e9e;
+  min-height: 196px;
+}
+.d3greycntn{
+  background-color: #171717;
+  border-radius: 7px;
+  color: #fff;
+  box-shadow: inset 0px 2px 2px 1px rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid #9e9e9e;
+}
+.jadbankitem{
+  font-size: 1.2rem;
+}
+.pad1rem05rem{
+  padding: 1rem .5rem;
+  box-sizing: border-box;
+}
+.pad05rem{
+  padding: .5rem;
+  box-sizing: border-box;
+}
+.numbered{
+  padding: 0 1.5rem;
+}
+.numbered li{
+  list-style: decimal;
+  margin-bottom: .6rem;
+  color: #BDBDBD;
+}
+.rouletteBg{
+  background-image: url("images/rouletteBg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.referralBg{
+  background-image: url("images/referralBg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.girlBg{
+  background-image: url("images/sxgirl.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 25% auto;
+}
+
+.pokaBg{
+  background-image: url("images/pokaBg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.domsBg{
+  background-image: url("images/domsBg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.leftbg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.rightbg{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+.container{
+  z-index: 2;
+  position: relative;
+}
+.pandArea{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.pandArea::-webkit-scrollbar {
+    width: .55rem;
+}
+ 
+.pandArea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+ 
+.pandArea::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.5);
+  border-radius: 10px;
+  outline: 1px solid slategrey;
+}
+.tabs {
+    height: auto;
+    background-color: transparent;
+}
+.tabs .tab {
+
+}
+.tabs .tab a {
+    background-image: -moz-linear-gradient( 90deg, rgba(255,132,0,0) 0%, rgba(255,173,56,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255,132,0,0) 0%, rgba(255,173,56,0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(255,132,0,0) 0%, rgba(255,173,56,0) 100%);
+    transition: color .28s ease;
+    color: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    
+    border-bottom: 0px;
+}
+.tabs .tab a.active, .tabs .tab a:hover {
+    background: rgba(93,144,198,1);
+    background: -moz-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(93,144,198,1)), color-stop(100%, rgba(25,93,171,1)));
+    background: -webkit-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+    background: -o-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+    background: -ms-linear-gradient(top, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+    background: linear-gradient(to bottom, rgba(93,144,198,1) 0%, rgba(25,93,171,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d90c6', endColorstr='#195dab', GradientType=0 );
+    color: #fff;
+    border-bottom: 0px;
+}
+.tabs .indicator {
+    background-color: #fff;
+}
+
+.seq1,
+.seq2,
+.seq3,
+.seq4,
+.seq5,
+.seq6,
+.seq7
+{
+  opacity: 0;
+  transition: all ease-in-out .5s;
+}
+
+.seq1{
+  transform: translate(-100%, 0%);
+}
+
+.seq4{
+  transform: translate(0%, -50%);
+}
+
+.seq5{
+  transform: translate(-50%, 0%);
+}
+
+td, th {
+    padding: 5px;
+}
+
+@media only screen and (min-width : 1366px) and (max-width : 1660px) {
+  .d3cntn {
+      min-height: 226.4px;
+  }
+}
+
+@media only screen and (min-width : 1080px) and (max-width : 1366px) {
+  html{
+    font-size: 13px;
+  }
+  .slider {
+      height: 295px !important;
+  }
+  #jackArea {
+      padding: 1.65rem 0;
+      background-image: url("images/jackBg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+}
+
+
+</style>
+<div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo"><img src="images/logo.png"></a>
+      <ul class="right hide-on-med-and-down table-of-contents">
+        <li><a class="" href="/">Home</a></li>
+        <li><a href="#bankArea">Jadwal Bank</a></li>
+        <li><a href="#panduanarea">Panduan</a></li>
+        <li><a href="#promoarea">Promo</a></li>
+        <li><a href="#peraturanarea">Peraturan</a></li>
+        <li><a href="#referalarea">Referal</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav table-of-contents">
+        <li><a class="" href="/">Home</a></li>
+        <li><a href="#bankArea">Jadwal Bank</a></li>
+        <li><a href="#panduanarea">Panduan</a></li>
+        <li><a href="#promoarea">Promo</a></li>
+        <li><a href="#peraturanarea">Peraturan</a></li>
+        <li><a href="#referalarea">Referal</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons redve">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+<img class="leftbg" src="images/leftBg.jpg">
+<img class="rightbg" src="images/rightBg.jpg">
+
+<div class="row mar0" style="margin-top : 2rem;">
+  <div class="container">
+    <div class="col l9 m12 mar75bot hide-on-med-and-down">
+      <div class="slider bora5 black">
+        <ul class="slides">
+          <li>
+            <img src="images/1.jpg"> <!-- random image -->
+            <div class="caption center-align">
+            </div>
+          </li>
+          <li>
+            <img src="images/2.jpg"> <!-- random image -->
+            <div class="caption left-align">
+            </div>
+          </li>
+          <li>
+            <img src="images/3.jpg"> <!-- random image -->
+            <div class="caption right-align">
+            </div>
+          </li>
+          <li>
+            <img src="images/4.jpg"> <!-- random image -->
+            <div class="caption right-align">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col l3 m12 mar75bot">
+      <div id="contactArea" class="clearfix bora5 cntnt1" style="width : 100%;">
+        <div class="clearfix blgrad">
+            <div class="clearfix oragePetals">
+              <h5 class="center-align white-text"><b class="olOrange">LOGIN</b></h5>
+            </div>
+        </div>
+        <form>
+          <div class="clearfix" style="padding: .5rem 0;">
+            <div class="col s12">
+              <input autofocus="true" class="browser-default col s12" type="text" name="username" placeholder="USERNAME">
+            </div>
+            <div class="col s12">
+              <input class="browser-default col s12" type="password" name="password" placeholder="PASSWORD">
+            </div>
+            <div class="col s12">
+              <input class="center-align browser-default col s12" type="text" name="" placeholder="CAPTCHA">
+            </div>
+            <div class="col s12">
+              <input class="browser-default col s12" type="text" name="captcha" placeholder="MASUKAN CAPTCHA ANDA">
+            </div>
+            <div class="col s12">
+              <input class="btn col s12 blue darken-2" type="submit" name="username" value="LOGIN">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="col l12">
+      <div class="clearfix bora5" style="width : 100%;">
+        <div class="clearfix blgrad">
+          <div class="clearfix dashedBg">
+            <div class="col l12">
+              <h5 id="bankArea" class="center-align white-text banktext scrollspy"><b class="olOrange">MELAYANI : </b><b class="olOrange">BCA</b><b class="olOrange">MANDIRI</b><b class="olOrange">BRI</b><b class="olOrange">DANAMON</b></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mar0">
+  <div class="container clearfix">
+    <div class="col l9 mar75bot">
+      <div id="jackArea" class="clearfix bora5" style="width : 100%; background-color: rgba(0,0,0,0.5);">
+        <div class="col l6 m6 s12 dashedBg">
+          <p class="center-align mar0 ln0"><img class="responsive-img" src="images/jack01.png"></p>
+          <div class="clearfix">
+            <h4 class="center-align neontext2">999,999,999</h4>
+          </div>
+          <p class="center-align mar0"><span class="clearfix neon2 dpinblock" style="width : 90%; height : 5px;"></span></p>
+          <h3 class="center-align" style="color:#194ec7;">POKER</h3>
+        </div>
+        <div class="col l6 m6 s12">
+          <p class="center-align mar0 ln0"><img class="responsive-img" src="images/jack02.png"></p>
+          <div class="clearfix">
+            <h4 class="center-align neontext2">999,999,999</h4>
+          </div>
+          <p class="center-align mar0"><span class="clearfix neon2 dpinblock" style="width : 90%; height : 5px;"></span></p>
+          <h3 class="center-align" style="color:#194ec7;">DOMINO</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col l3 m12 mar75bot">
+      <div id="contactArea" class="clearfix bora5 cntnt1" style="width : 100%;">
+        <div class="clearfix blgrad">
+            <div class="clearfix">
+              <h5 class="center-align white-text"><b class="olOrange">CONTACT US</b></h5>
+            </div>
+        </div>
+        
+        <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x" style="color : #fff;"></i>
+            <i class="fa fa-mobile fa-stack-1x" style="color: #4D0036;"></i>
+          </span>
+          <span class="dText"><b>2B2D8D6D (BBM)</b></span>
+        </p>
+        <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x" style="color : #fff;"></i>
+            <i class="fa fa-mobile fa-stack-1x" style="color: #4D0036;"></i>
+          </span>
+          <span class="dText"><b>2BE31F4A (BBM)</b></span>
+        </p>
+        <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x" style="color : #fff;"></i>
+            <i class="fa fa-facebook fa-stack-1x" style="color: #3b5998;"></i>
+          </span>
+          <span class="dText"><b>IDRPoker</b></span>
+        </p>
+        <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x" style="color : #fff;"></i>
+            <i class="fa fa-twitter fa-stack-1x" style="color: #4099FF;"></i>
+          </span>
+          <span class="dText"><b>@idrpoker</b></span>
+        </p>
+        <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x" style="color : #fff;"></i>
+            <i class="fa fa-youtube fa-stack-1x" style="color: #e52d27;"></i>
+          </span>
+          <span class="dText"><b>idrpoker</b></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="col l12">
+      <div class="clearfix bora5">
+        <div class="clearfix cntnt1">
+          <div class="clearfix dashedBg pad1rem05rem">
+
+            <div class="col l3 m6 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <p class="center-align"p ><b class="olOrange">SETOR DANA TERKAHIR</b></p>
+                <table>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="col l3 m6 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <p class="center-align"p ><b class="olOrange">TARIK DANA TERKAHIR</b></p>
+                <table>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="col l3 m6 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <p class="center-align"p ><b class="olOrange">5 JACKPOT TERAKHIR</b></p>
+                <table>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="col l3 m6 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <p class="center-align"p ><b class="olOrange">5 PEMENANG REFERAL</b></p>
+                <table>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                  <tr>
+                    <td class="center-align">randNam***</td>
+                    <td class="center-align"><input disabled="true" class="browser-default col s12 active white-text right-align" type="text" name="username" value="000.000.000"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="col l12">
+      <div class="clearfix bora5">
+        <div class="clearfix blgrad">
+            <div class="clearfix">
+              <h5 class="center-align white-text"><b class="olOrange">JADWAL BANK</b></h5>
+            </div>
+        </div>
+        <div class="clearfix cntnt1">
+          <div class="clearfix dashedBg pad1rem05rem">
+
+            <div class="col l3 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <h5 class="center-align"><b class="olOrange">BCA</b></h5>
+                <p>
+                  Senin - Jumat : 21.00 - 00.30 WIB<br>
+                  Sabtu : 18.00 - 20.00 WIB<br>
+                  Minggu : 00.00 - 05.00 WIB
+                </p>
+              </div>
+            </div>
+
+            <div class="col l3 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <h5 class="center-align"><b class="olOrange">MANDIRI</b></h5>
+                <p>
+                  Senin - Jumat : 23.00 - 04.00 WIB<br>
+                  Sabtu - Minggu : 22.00 - 05.00 WIB
+                </p>
+              </div>
+            </div>
+
+            <div class="col l3 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <h5 class="center-align"><b class="olOrange">BRI</b></h5>
+                <p>
+                  Senin - Minggu : 24.00 - 06.00 WIB
+                </p>
+              </div>
+            </div>
+
+            <div class="col l3 s12 pad05rem">
+              <div class="clearfix d3cntn col s12 jadbankitem">
+                <h5 class="center-align"><b class="olOrange">BNI DANAMON</b></h5>
+                <p>
+                  ONLINE 24 JAM, KECUALI SEDANG TERJADI GANGGUAN DI WAKTU YANG TIDAK DAPAT DITENTUKAN.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="panduanarea" class="row pandarea scrollspy">
+  <div class="container">
+    <div class="col s12">
+      <div class="clearfix bora5 cntnt1 seq1">
+        <div class="clearfix blgrad seq2">
+            <div class="clearfix">
+              <h5 class="center-align white-text"><b class="olOrange seq3">PANDUAN</b></h5>
+            </div>
+        </div>
+
+        <div class="clearfix" style="padding-top:1rem;">
+           <div class="col s12 seq4">
+              <ul class="tabs" style="width: 100%;">
+                 <li class="tab col s3"><a class="active" href="#test1">Panduan Bermain Poker</a></li>
+                 <li class="tab col s3"><a class="" href="#test2">Panduan Bermain Domino</a></li>
+              </ul>
+           </div>
+           <div id="test1" class="white-text clearfix pad05rem seq5">
+              <div class="clearfix d3greycntn pad05rem pokaBg pandArea" style="height:50vh;">
+                <p>
+                  Texas Hold’em Poker merupakan permainan kartu poker yang sangat populer dan digemari saat ini. Oleh karena itu
+                  kami hadir untuk para pecinta Texas Hold’em Poker yang mencari permainan poker online yang paling adil sistem Player
+                  vs Player. Berikut adalah Panduan Bermain Texas Hold’em Poker<br><span class="white dpinblock" style="padding:.3rem;"><img class="responsive-img" src="images/logo.png" alt="idrpoker agen poker terpercaya"></span>
+                </p>
+                <p>
+                  Adapun Istilah dasar dalam permainan Texas Hold’em Poker :
+                </p>
+                <ul>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>Lobby</b> : Tempat dimana anda bisa memilih room permainan Texas Hold’em Poker.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>Check</b> : Berarti memeriksa nilai taruhan yang ada di meja.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>Call</b>  : Mengikuti nilai taruhan yang ada di meja.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>Call Any</b>  : Mengikuti berapapun nilai taruhan yang ada di meja sebelum giliran anda bermain.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>Fold</b>   : Tidak mengikuti nilai taruhan yang ada di meja.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>All In</b>   : Mempertaruhkan semua chip milik anda di meja taruhan.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>Raise</b>   : Menaikkan nilai taruhan sesuai yang anda inginkan.
+                  </li>
+                </ul>
+                <p><b>Langkah Awal :</b></p>
+                <p>
+              Setelah anda melakukan login menggunakan username dan password anda, klik di bagian “PLAY POKER - Rupiah” atau “PLAYPOKER -
+              Android / Iphone / Ipad -”. Kemudian akan muncul sebuah kolom dimana anda bisa memilih di LINE mana anda akan bermain. Setelah
+              Proses tersebut anda hanya perlu memilih di meja taruhan mana anda ingin bermain.
+                </p>
+                <p><b>Aturan Bermain :</b></p>
+                <p>
+                  Pertama, anda akan diberikan 2 kartu lalu jika semua player menyatakan CALL/CHECK, baru bandar membuka kartu satu persatu (jika ada
+                  yang raise taruhan kartu tidak akan dibuka oleh bandar sampai semua pemain menyatakan CALL/CHECK) begitu seterusnya.
+                </p>
+                <p><b>Berikut susunan kartu :</b></p>
+
+                <ul style="padding-left:3rem;">
+                  <li>
+                    <b>1. Pair</b>
+                    <br>
+                    <img src="images/onepair1.jpg">
+                    <br>
+                    Pair : Kartu kembar (berpasangan). Contoh kartu Pair yaitu As dan As yang dinamakan One Pair. One Pair kalah dengan Two Pair ,
+              contohnya 3 3 dan 2 2, namun Two Pair kalah dengan three of kind atau kembar tiga contohnya 5 5 5.
+                  </li>
+                  <br>
+                  <li>
+                    <b>2. Three of Kind</b>
+                    <br>
+                    <img src="images/threeofakind1.jpg">
+                    <br>
+                    Three of Kind : Kembar tiga contohnya J J J.
+                  </li>
+                  <br>
+                  <li>
+                    <b>3. Kartu Straight (berurutan)</b>
+                    <br>
+                    <img src="images/straight1.jpg">
+                    <br>
+                    Kartu Straight (berurutan) : 5 Kartu berurutan, contohnya 2 3 4 5 6 atau 10 J Q K As atau juga 5 6 7 8 9.
+                  </li>
+                  <br>
+                  <li>
+                    <b>4. Kartu Flush (semua motif sama)</b>
+                    <br>
+                    <img src="images/straight1.jpg">
+                    <br>
+                    Kartu Flush (semua motif sama) Adalah Kartu yang terjadi apabila kita memiliki 5 kartu dengan jenis yang sama, berapapun angkanya,
+              contohnya 2 4 5 7 8 bermotif SEKOP semua.
+                  </li>
+                  <br>
+                  <li>
+                    <b>5. Full House (Three of Kind + One Pair)</b>
+                    <br>
+                    <img src="images/fullhouse1.jpg">
+                    <br>
+                    Full house (Three of Kind + One Pair) Adalah kartu dengan gabungan dari Three of Kind + One Pair. Contohnya K K K + 10 10.
+                  </li>
+                  <br>
+                  <li>
+                    <b>6. Four Of Kind (angka kembar 4)</b>
+                    <br>
+                    <img src="images/fourofakind1.jpg">
+                    <br>
+                    Four Of Kind (angka kembar 4) Kartu yang terjadi apabila memiliki 4 kartu kembar, contohnya As As As As 8.
+                  </li>
+                  <br>
+                  <li>
+                    <b>7. Straight Flush (berurutan dan semua motif kartu sama)</b>
+                    <br>
+                    <img src="images/straightflush1.jpg">
+                    <br>
+                    Straight Flush (berurutan dan semua motif kartu sama) Straight Flush adalah gabungan dari kartu Straight (kartu berurutan) dan kartu
+              Flush (semua motif sama). Contohnya kartu 5 6 7 8 9  Keriting(CLUB).
+                  </li>
+                  <br>
+                  <li>
+                    <b>8. Royal Flush (berurutan sampai As dan semua motif kartu sama)</b>
+                    <br>
+                    <img src="images/royalflush1.jpg">
+                    <br>
+                    Royal Flush (berurutan sampai As dan semua motif kartu sama) Royal Flush adalah kartu Straight Flush dengan nilai yang lebih tinggi,
+              contohnya lawan memiliki 5 6 7 8 9 Keriting(CLUB) dan kita memiliki 10 J Q K As Hati.
+                  </li>
+                </ul>
+                <p><b>Menentukan Pemenang</b></p>
+                <p>Kartu yang nilainya lebih tinggi akan mengalahkan kartu yang nilainya lebih rendah. Contoh : Nilai kartu 2 akan kalah dengan 3,
+              3 kalah dengan 4, dan seterusnya sampai As (ACE).</p>
+
+                <ul>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> Nilai kartu tertinggi (High Card) berapapun juga, akan kalah dengan kombinasi kartu yang bernama <b>“One Pair”</b>.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“One Pair”</b> kalah dengan “Two Pair”
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Two Pair”</b> Kalah dengan “Three of a Kind”
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Three of a Kind”</b> Kalah dengan “Straight”anda bermain.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Straight”</b>  Kalah dengan “Flush”
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Flush”</b> Kalah dengan <b>“Full House”</b>
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Full House”</b>  Kalah dengan <b>“Four of a Kind”</b>.
+                  </li>
+
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Four of a Kind”</b>  Kalah dengan <b>“Straight Flush”</b>.
+                  </li>
+                  <li style="line-height:2rem;">
+                    <span style="font-size: 3rem;vertical-align: middle;color:#ffd52d;">•</span> <b>“Straight Flush”</b>  Kalah dengan <b>“Royal Flush”</b>.
+                  </li>
+                </ul>
+              </div>
+           </div>
+
+
+           <div id="test2" class="white-text clearfix pad05rem">
+              <div class="clearfix d3greycntn pad05rem domsBg pandArea" style="height:50vh;">
+                <table class="white-text" align="center" border="0" cellpadding="0" cellspacing="0" width="770" style="margin-top:5px;">
+                <tbody>
+                <tr>
+                <td><div style="float:left; height:40px;"></div>
+                <div style="height:40px; margin-top:5px; font-family: Arial, Helvetica, sans-serif; font-size:25px; font-weight: bold;">&nbsp; Pengenalan Kartu</div></td>
+                </tr>
+                <tr>
+                <td class="kotaktext" scope="col" align="justify" style="padding:15px;"><table style="border-collapse:collapse;">
+                <tbody>
+                <tr>
+                <td colspan="2"><p>Total terdapat 28 kartu dalam permainan Domino KiuKiu (maksimal pemain 6 orang dan setiap pemain mendapat 4 kartu).<br>
+                Setiap kartu Domino memiliki 2 sisi, sisi atas dan sisi bawah yang dipisahkan oleh garis tengah. <br>
+                Setiap kartu memiliki jumlah bulatan yang berbeda, yang menunjukkan nilai dari kartu tersebut. <br>
+                Cara termudah untuk mengingat kartu-kartu tersebut adalah dengan mengelompokan kartu-kartu tersebut ke dalam 7 seri kartu.<br>
+                <font style="color:#f00"><b>*warna merah yang terdapat di bawah setiap kartu menunjukkan nilai dari setiap kartu.</b></font></p></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636;"><div style="font-size:12px; font-weight: bold;">Seri Kartu</div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636;"><div style="font-size:12px; font-weight: bold;">Keterangan</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/serinol (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 0</b> <br>
+                Terdapat 7 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu <font style="color:red">tidak</font> memiliki bulatan pada sisi atas atau bawah kartu.</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/serisatu (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 1</b> <br>
+                Terdapat 6 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu memiliki <font style="color:red">satu</font> <b>buah</b> bulatan besar pada sisi atas atau bawah kartu</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/seridua (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 2</b> <br>
+                Terdapat 5 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu memiliki <font style="color:red">dua</font> <b>buah</b> bulatan pada sisi atas atau bawah kartu</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/seritiga (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 3</b> <br>
+                Terdapat 4 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu memiliki <font style="color:red">tiga</font> <b>buah</b> bulatan pada sisi atas atau bawah kartu</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/seriempat (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 4</b> <br>
+                Terdapat 3 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu memiliki <font style="color:red">empat</font> <b>buah</b> bulatan pada sisi atas atau bawah kartu</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/serilima (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 5</b> <br>
+                Terdapat 2 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu memiliki <font style="color:red">lima</font> <b>buah</b> bulatan pada sisi atas atau bawah kartu</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="border-top:1px solid; border-bottom:1px solid; border-right:1px solid; border-color:#363636; height:80px;"><div style="font-size:1rem;line-height:1rem; font-weight: bold;"><img class="responsive-img" height="80px" src="images/serienam (2).png"></div></td>
+                <td style="border-top:1px solid; border-bottom:1px solid; border-left:1px solid; border-color:#363636; padding-left:15px; padding-right:15px"><div align="left" style="font-size:1rem;line-height:1rem; line-height:15px;"><b>Seri Kartu 6</b> <br>
+                Terdapat 1 buah kartu dalam seri kartu ini. <br>
+                Setiap kartu memiliki <font style="color:red">enam</font> <b>buah</b> bulatan pada sisi atas atau bawah kartu</div></td>
+                </tr>
+                <tr align="center">
+                <td width="45%" style="height:80px;"></td>
+                <td style="padding-left:15px; padding-right:15px" align="right"><!-- <span><a href="" style="text-decoration:none;"> <img width="50px" src="panduan/images/backbut.png" /> </a></span> --> 
+
+                </td>
+                </tr>
+                </tbody>
+                </table></td>
+                </tr>
+                </tbody>
+                </table>
+              </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="promoarea" class="row promoarea scrollspy">
+  <div class="container">
+    <div class="col l12">
+      <div class="clearfix bora5 seq1">
+        <div class="clearfix blgrad seq2">
+            <div class="clearfix">
+              <h5 class="center-align white-text"><b class="olOrange seq3">PROMO</b></h5>
+            </div>
+        </div>
+        <div class="clearfix pad05rem cntnt1 seq5">
+          <div class="clearfix d3greycntn pad05rem girlBg">
+            <ul class="numbered">
+              <li><b>Extra 0.3% bonus</b><br>
+                Apakah promo ini ?<br>
+                Dapatkan bonus 0.3% dari jumlah turnover anda<br>
+                Segera daftarkan akun anda di WWW.IDRPOKER.COM
+              </li>
+              <li><b>Bagaimana cara mendapatkannya ?</b><br>
+                Bonus 0.3% akan kami hitung dari <b>jumlah turnover anda</b><br>
+                <b>Contoh :</b><br>
+                turnover anda sebesar Rp.1.000.000,-X 0.3% = Rp.3000,-bonus anda
+              </li>
+              <li>Penghitungan bonus akan kami hitung sebulan sekali</li>
+              <li>
+                Bonus anda akan kami masukan berupa kredit ke dalam akun anda.<br>
+                Untuk info lebih jelas silahkan menghubungi customer service kami yang setia melayani anda dalam 24 jam nonstop<br>
+                IDRPOKER selalu berusaha mewujudkan kepuasan pelanggan,memberikan pelayanan yang terbaik buat para member tercinta kami
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="peraturanarea" class="row peraturanarea scrollspy">
+  <div class="container">
+    <div class="col l12">
+      <div class="clearfix bora5 seq1">
+        <div class="clearfix blgrad seq2">
+            <div class="clearfix">
+              <h5 class="center-align white-text"><b class="olOrange seq3">PERATURAN</b></h5>
+            </div>
+        </div>
+        <div class="clearfix pad05rem cntnt1 seq5">
+          <div class="clearfix d3greycntn pad05rem rouletteBg">
+            <ul class="numbered">
+              <li>Batasan usia pengguna IdrPoker.com disesuaikan dengan peraturan negara tempat pengguna IdrPoker.com berada. IdrPoker.com sama sekali tidak bertanggung jawab atas setiap peraturan perundang-undangan negara yang dilanggar oleh setiap pengguna yang menggunakan website kami.</li>
+              <li>Pemain bertanggung jawab atas setiap tindakan mereka sendiri dan terikat oleh undang-undang negara mereka sendiri.</li>
+              <li>Semua agen bertanggungjawab terhadap akun masing-masing dan menghormati semua perjanjian yang telah disetujui oleh mereka.</li>
+              <li>Agen bukanlah rekan IdrPoker.com. Setiap perbedaan yang timbul antara pemain dan Agen bukan merupakan tanggung jawab IdrPoker.com.</li>
+              <li>Untuk kepentingan bersama agar diwaspadai, ID Pengguna dan Password dari penggunaan yang tidak sah. Jika ID Pengguna dan Password dicuri atau kehilangan, pengguna harus menghubungi Agennya yang bersangkutan. Agen kemudian akan menukar User ID pengguna / Password. Apabila password dicuri/kehilangan, pengguna bertanggung jawab untuk akun masing-masing dan wajib untuk menghormati semua tata cara diajukan.</li>
+              <li>Keputusan IdrPoker.com adalah bersifat final dan mengikat dalam segala perkara.</li>
+              <li>Dalam semua kasus perselisihan, baik pengurus dan pemain IdrPoker.com menyetujui bahwa IdrPoker.com akan bertindak sebagai penengah dalam pertikaian akhir. Tidak akan ada tuntutan lebih lanjut setelah keputusan dari IdrPoker.com.</li>
+              <li>Pemain bertanggungjawab atas semua transaksi pada akun mereka. Pastikan anda memeriksa kembali entri anda dari setiap kesalahan atau kelalaian sebelum melakukan konfirmasi. Setelah melakukan komfirmasi, entri tidak dapat diubah kembali melalui komputer anda.</li>
+              <li>Tanpa mengurangi ketentuan umum yang telah disebutkan sebelumnya, IdrPoker.com tidak bertanggung jawab atas apa pun jika terjadi Force Majeure, dan/atau atas peristiwa kegagalan atau kerusakan atau kehilangan data pada sistem komputer pusat, atau penangguhan, kerugian, kesalahan, kelalaian, atau apapun yang disebabkan oleh kegagalan sistem komunikasi atau sistem komunikasi data lainnya. atau menyebabkan kelebihan penerimaan yang tidak sesuai dengan entri untuk transaksi tertentu.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="referalarea" class="row referalarea scrollspy">
+  <div class="container">
+    <div class="col l12">
+      <div class="clearfix bora5 seq1">
+        <div class="clearfix blgrad seq2">
+            <div class="clearfix">
+              <h5 class="center-align white-text"><b class="olOrange seq3">REFERAL</b></h5>
+            </div>
+        </div>
+        <div class="clearfix pad05rem cntnt1 seq5">
+          <div class="clearfix d3greycntn pad05rem referralBg">
+            <ul class="numbered">
+               <li>Potongan meja yang kami tentukan adalah sebesar 3% dari jumlah kemenangan anda<br><b>
+                Contoh : anda berhasil menang sebesar Rp.1.000.000 , maka nilai jumlah kemenangan anda setelah di potong adalah sebesar Rp 970.000,-
+               </b></li> 
+               <li>Setelah anda sudah mengetahui cara perhitungan meja,langkah selanjutnya adalah mengetahui kode referral anda</li>
+               <li>Kode referral anda bisa anda lihat setelah anda melakukan login dan klik di kolom referensi,nanti akan muncul sebuah kotak yang menampilkan kode referral anda,</li>
+               <li>pastikan anda telah mencatat dan mohon mengingat kode referral ini</li>
+               <li>Setelah itu ajak teman anda sebanyak mungkin untuk bergabung dan bermain di WWW.IDRPOKER.COM</li>
+               <li>Jangan lupa untuk memasukan kode referral anda di kolom referral pada saat teman anda melakukan registrasi (daftar baru).</li>
+               <li>Dan anda hanya perlu menunggu teman anda bermain dan anda akan mendapatkan bonus 10% dari teman anda</li>
+               <li>Bonus 10% bisa anda ambil dari potongan meja 3%<br>
+               <b>Contoh : teman anda menang sebesar Rp.1.000.000,- dikurangi potongan meja 3% (Rp.30.000 ) maka Rp.30.000,-X 10% = Rp.3000,- ( nilai referensi yang anda dapatkan dari teman anda )</b>
+               </li>
+               <li>Semakin banyak teman yang anda ajak,semakin besar bonus yang anda dapatkan.</li>
+               <li>Untuk keterangan lebih lanjut anda bisa menghubungi customer service kami yang ramah dan sopan.</li>
+               <li>Pelayanan kepada para member dengan respon yang cepat dan 24 jam,kami siap melayani anda</li>
+               <li>Ayoo segera daftarkan diri dan ajak teman anda untuk bergabung di IDRPOKER.COM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer clearfix blgrad " style="z-index:2;position:relative;">
+  <div class="row">
+    <div class="container">
+      <div class="col l6 m6 s12"><p class="center-align"><img src="images/safety.png"></p></div>
+      <div class="col l6 m6 s12"><p class="center-align white-text">Copyright &copy; IDRPOKER Allrights reserved</p></div>
+    </div>
+  </div>
+</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+
+    function chText(elesu){
+      var count = 0;
+      var el = $('.'+elesu);
+      var testext = el.text();
+      var testext2 = testext.split("");
+      el.css({"opacity" : "1"});
+      el.html(testext2[0]);
+      count = count + 1;
+      var tEf = setInterval(function(){
+
+        el.append(testext2[count]);
+        count++;
+        if (count == testext.length) {clearInterval(tEf);}
+
+      }, 50);
+    }
+
+    function pandarea(){
+      setTimeout(function(){
+        $( ".pandarea .seq1" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+        setTimeout(function(){
+          $( ".pandarea .seq2" ).css({"opacity" : "1"});
+          setTimeout(function(){
+            chText('pandarea .seq3');
+            setTimeout(function(){
+              $( ".pandarea .seq4" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+              setTimeout(function(){
+                $( ".pandarea .seq5" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+              }, 500);
+            }, 500);
+          }, 500);
+        }, 500);
+      }, 500);
+    }
+
+    function promoarea(){
+      setTimeout(function(){
+        $( ".promoarea .seq1" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+        setTimeout(function(){
+          $( ".promoarea .seq2" ).css({"opacity" : "1"});
+          setTimeout(function(){
+            chText('promoarea .seq3');
+            setTimeout(function(){
+              $( ".promoarea .seq5" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+            }, 500);
+          }, 500);
+        }, 500);
+      }, 500);
+    }
+
+    function peraturanarea(){
+      setTimeout(function(){
+        $( ".peraturanarea .seq1" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+        setTimeout(function(){
+          $( ".peraturanarea .seq2" ).css({"opacity" : "1"});
+          setTimeout(function(){
+            chText('peraturanarea .seq3');
+            setTimeout(function(){
+              $( ".peraturanarea .seq5" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+            }, 500);
+          }, 500);
+        }, 500);
+      }, 500);
+    }
+
+    function referalarea(){
+      setTimeout(function(){
+        $( ".referalarea .seq1" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+        setTimeout(function(){
+          $( ".referalarea .seq2" ).css({"opacity" : "1"});
+          setTimeout(function(){
+            chText('referalarea .seq3');
+            setTimeout(function(){
+              $( ".referalarea .seq5" ).css({"opacity" : "1","transform" : "translate(0%, 0%)"});
+            }, 500);
+          }, 500);
+        }, 500);
+      }, 500);
+    }
+
+    var asd = [
+      { selector:".pandarea", offset: 700, callback: "pandarea()"},
+      { selector:".promoarea", offset: 700, callback: "promoarea()"},
+      { selector:".peraturanarea", offset: 700, callback: "peraturanarea()"},
+      { selector:".referalarea", offset: 300, callback: "referalarea()"}
+    ];
+
+    Materialize.scrollFire(asd);
+  </script>
+
+  </body>
+</html>
